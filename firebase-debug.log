@@ -1,0 +1,65 @@
+[debug] [2024-02-08T23:28:57.826Z] ----------------------------------------------------------------------
+[debug] [2024-02-08T23:28:57.827Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2024-02-08T23:28:57.827Z] CLI Version:   13.1.0
+[debug] [2024-02-08T23:28:57.827Z] Platform:      darwin
+[debug] [2024-02-08T23:28:57.827Z] Node Version:  v20.10.0
+[debug] [2024-02-08T23:28:57.827Z] Time:          Fri Feb 09 2024 01:28:57 GMT+0200 (Eastern European Standard Time)
+[debug] [2024-02-08T23:28:57.828Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-08T23:28:57.886Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-08T23:28:57.886Z] > authorizing via signed-in user (els3edyzizo1171152@gmail.com)
+[debug] [2024-02-08T23:28:57.886Z] [iam] checking project mrkaz-7f790 for permissions ["firebase.projects.get"]
+[debug] [2024-02-08T23:28:57.887Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mrkaz-7f790:testIamPermissions [none]
+[debug] [2024-02-08T23:28:57.887Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mrkaz-7f790:testIamPermissions x-goog-quota-user=projects/mrkaz-7f790
+[debug] [2024-02-08T23:28:57.887Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mrkaz-7f790:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-08T23:28:59.228Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mrkaz-7f790:testIamPermissions 200
+[debug] [2024-02-08T23:28:59.229Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mrkaz-7f790:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-08T23:28:59.231Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790 [none]
+[debug] [2024-02-08T23:29:02.602Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790 200
+[debug] [2024-02-08T23:29:02.603Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790 {"projectId":"mrkaz-7f790","projectNumber":"1097747611748","displayName":"mrkaz","name":"projects/mrkaz-7f790","resources":{"hostingSite":"mrkaz-7f790","realtimeDatabaseInstance":"mrkaz-7f790-default-rtdb"},"state":"ACTIVE","etag":"1_cf05f5ed-df68-468a-8da9-e2294b750f01"}
+[debug] [2024-02-08T23:29:02.608Z] defaultcredentials: writing to file /Users/zizomac/.config/firebase/els3edyzizo1171152_gmail_com_application_default_credentials.json
+[debug] [2024-02-08T23:29:02.610Z] Setting GAC to /Users/zizomac/.config/firebase/els3edyzizo1171152_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/zizomac/.config/firebase/els3edyzizo1171152_gmail_com_application_default_credentials.json"}}
+[debug] [2024-02-08T23:29:02.610Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790/adminSdkConfig [none]
+[debug] [2024-02-08T23:29:02.939Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790/adminSdkConfig 200
+[debug] [2024-02-08T23:29:02.939Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mrkaz-7f790/adminSdkConfig {"projectId":"mrkaz-7f790","databaseURL":"https://mrkaz-7f790-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"mrkaz-7f790.appspot.com"}
+[info] i  functions: Watching "/Users/zizomac/Documents/mrkaz-website/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/zizomac/Documents/mrkaz-website/functions\" for Cloud Functions..."}}
+[debug] [2024-02-08T23:29:02.967Z] Validating nodejs source
+[debug] [2024-02-08T23:29:06.826Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.3.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.16",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.5"
+  },
+  "private": true
+}
+[debug] [2024-02-08T23:29:06.826Z] Building nodejs source
+[debug] [2024-02-08T23:29:06.826Z] Failed to find version of module node: reached end of search path /Users/zizomac/Documents/mrkaz-website/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-08T23:29:06.829Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-08T23:29:06.834Z] Found firebase-functions binary at '/Users/zizomac/Documents/mrkaz-website/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8010
+
+[debug] [2024-02-08T23:29:06.974Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://localhost:5000/mrkaz-7f790/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/mrkaz-7f790/us-central1/api)."}}
